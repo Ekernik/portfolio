@@ -8,6 +8,13 @@ import {
   UserIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
+import {
+  Github,
+  Linkedin,
+  Telegram,
+  Vk,
+  Whatsapp,
+} from '@icons-pack/react-simple-icons';
 import { Fragment } from 'react';
 
 const Header: React.FC = () => {
@@ -118,21 +125,39 @@ const Header: React.FC = () => {
               </div>
             </div>
             <div className="space-y-6 py-6 px-5">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a
-                  href="#"
-                  className="text-base font-medium text-slate-900 hover:text-slate-700"
-                >
-                  Pricing
+              <div className="grid grid-cols-5 gap-y-4 gap-x-8">
+                <a href="https://vk.com/ekernik">
+                  <Vk className="h-8 w-8 text-slate-900 transition hover:text-slate-700" />
                 </a>
-
-                <a
-                  href="#"
-                  className="text-base font-medium text-slate-900 hover:text-slate-700"
-                >
-                  Docs
+                <a href="https://t.me/ekernik">
+                  <Telegram className="h-8 w-8 text-slate-900 transition hover:text-slate-700" />
+                </a>
+                <a href="https://github.com/ekernik">
+                  <Github className="h-8 w-8 text-slate-900 transition hover:text-slate-700" />
+                </a>
+                <a href="https://www.linkedin.com/in/ekernik">
+                  <Linkedin className="h-8 w-8 text-slate-900 transition hover:text-slate-700" />
+                </a>
+                <a href="https://wa.me/79995383821">
+                  <Whatsapp className="h-8 w-8 text-slate-900 transition hover:text-slate-700" />
                 </a>
               </div>
+            </div>
+            <div className="space-y flex items-center justify-between py-6 px-5">
+              <a
+                href="tel:+79995383821"
+                className="font-semibold text-slate-900 hover:text-slate-700 hover:underline"
+              >
+                {/* <PhoneIcon className="mr-2 inline h-6" /> */}
+                +7 (999) 538-38-21
+              </a>
+              <a
+                href="mail:ekernik@proton.me"
+                className="font-semibold text-slate-900 hover:text-slate-700 hover:underline"
+              >
+                {/* <EnvelopeIcon className="mr-2 inline h-6" /> */}
+                ekernik@proton.me
+              </a>
             </div>
           </div>
         </Popover.Panel>

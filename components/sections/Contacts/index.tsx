@@ -54,7 +54,7 @@ const Contacts: React.FC = () => {
         <a href="https://github.com/ekernik">
           <Github className="h-10 w-10 text-slate-900 transition hover:text-slate-700 sm:h-8 sm:w-8 md:h-6 md:w-6" />
         </a>
-        <a href="#TODO">
+        <a href="https://www.linkedin.com/in/ekernik">
           <Linkedin className="h-10 w-10 text-slate-900 transition hover:text-slate-700 sm:h-8 sm:w-8 md:h-6 md:w-6" />
         </a>
         <a href="https://wa.me/79995383821">
