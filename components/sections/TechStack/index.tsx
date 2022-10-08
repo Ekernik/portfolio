@@ -2,50 +2,37 @@ import React from 'react';
 
 const TechStack: React.FC = () => {
   return (
-    <section
-      id="tech-stack"
-      className="container mx-auto flex h-max flex-col items-start justify-center px-4 md:max-w-lg md:px-1 lg:max-w-2xl"
-    >
-      <div className="mb-10">
-        <h2 className="text-2xl font-bold text-slate-700">#Tech Stack</h2>
-        <hr />
-      </div>
-
+    <section id="tech-stack" className="section">
+      <h2 className="section__header">#Tech Stack</h2>
       <div className="mb-10 w-full">
-        <h3 className="mb-4 text-lg font-bold text-slate-700">
-          Frontend Development
-        </h3>
+        <h3 className="tech__subheader">Frontend Development</h3>
         <div className="grid grid-cols-2 gap-2">
-          <p className="rounded bg-blue-100 p-2 text-center">HTML5</p>
-          <p className="rounded bg-blue-100 p-2 text-center">CSS / SCSS</p>
-          <p className="rounded bg-blue-100 p-2 text-center">ES 2022</p>
-          <p className="rounded bg-blue-100 p-2 text-center">
-            React + Typescript
-          </p>
-          <p className="rounded bg-blue-100 p-2 text-center">Next.js</p>
-          <p className="rounded bg-blue-100 p-2 text-center">Apollo Client 3</p>
+          <p className="skill">HTML5</p>
+          <p className="skill">CSS / SCSS</p>
+          <p className="skill">ES 2022</p>
+          <p className="skill">React + Typescript</p>
+          <p className="skill">Next.js</p>
+          <p className="skill">Apollo Client 3</p>
         </div>
       </div>
 
       <div className="mb-10 w-full">
-        <h3 className="mb-4 text-lg font-bold text-slate-700">
-          Backend Development
-        </h3>
+        <h3 className="tech__subheader">Backend Development</h3>
         <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-          <p className="rounded bg-blue-100 p-2 text-center">Node.js</p>
-          <p className="rounded bg-blue-100 p-2 text-center">Express</p>
-          <p className="rounded bg-blue-100 p-2 text-center">GraphQL</p>
-          <p className="rounded bg-blue-100 p-2 text-center">Nginx</p>
+          <p className="skill">Node.js</p>
+          <p className="skill">Express</p>
+          <p className="skill">GraphQL</p>
+          <p className="skill">Nginx</p>
         </div>
       </div>
 
       <div className="w-full">
-        <h3 className="mb-4 text-lg font-bold text-slate-700">Toolset</h3>
+        <h3 className="tech__subheader">Toolset</h3>
         <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-          <p className="rounded bg-blue-100 p-2 text-center">Postman</p>
-          <p className="rounded bg-blue-100 p-2 text-center">Figma</p>
-          <p className="rounded bg-blue-100 p-2 text-center">Linux</p>
-          <p className="rounded bg-blue-100 p-2 text-center">Storybook</p>
+          <p className="skill">Postman</p>
+          <p className="skill">Figma</p>
+          <p className="skill">Linux</p>
+          <p className="skill">Storybook</p>
         </div>
       </div>
     </section>

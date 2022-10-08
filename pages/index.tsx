@@ -22,13 +22,15 @@ const Home: NextPage = () => (
         content="Nikita Ekern's personal website - developing modern and reliable websites using latest technologies"
       />
     </Head>
-    <div className="flex max-h-max min-h-screen flex-col gap-20 bg-slate-50">
+    <div className="bg-slate-50 dark:bg-gray-900">
       <Header />
-      <Introduction />
-      <AboutMe />
-      <TechStack />
-      <MyWork />
-      <Contacts />
+      <main className="flex flex-col gap-20">
+        <Introduction />
+        <AboutMe />
+        <TechStack />
+        <MyWork />
+        <Contacts />
+      </main>
       <Footer />
     </div>
   </>

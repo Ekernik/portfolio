@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 const Footer: FC = () => {
   return (
-    <footer className="flex h-12 items-center justify-center bg-slate-50 text-xs font-bold">
+    <footer className="mt-4 flex h-12 items-center justify-center bg-slate-50 text-xs font-bold dark:bg-gray-900 dark:text-slate-400">
       &copy; 2022 Ekern Nikita - Web Developer
     </footer>
   );
