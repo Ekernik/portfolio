@@ -5,6 +5,8 @@ function Document() {
     return (
       <Html lang="en-US" className="scroll-smooth">
         <Head>
+          <link rel="shortcut icon" href="/favicon.ico" sizes="any" />
+          <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css" defer />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ekernik.com" />
