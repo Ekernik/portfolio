@@ -1,31 +1,24 @@
 import React from 'react';
 
-const AboutMe: React.FC = () => {
-  return (
-    <section id="about-me" className="section">
-      <h2 className="section__header">#About me</h2>
-      <p className="paragraph">
-        I love creating thing in internet that gives people joy and happines.
-      </p>
-      <p className="paragraph">
-        Today I focus on building accessible and fast websites for my clients.
-      </p>
-      <p className="paragraph mt-4 font-bold">
-        Here is my recipe for your success:
-      </p>
-      <p className="paragraph">
-        I pay a lot of attention to code optimisation, making your website load
-        fast
-      </p>
-      <p className="paragraph">
-        I configure your website for search engines, making it easier for your
-        potential clients to find you.
-      </p>
-      <p className="paragraph">
-        My websites are accessible to visitors with different disabilities.
-      </p>
-    </section>
-  );
-};
+const AboutMe: React.FC = () => (
+  <section id="about-me" className="section">
+    <h2 className="section__header">#About me</h2>
+    <p className="paragraph">Coding is my passion!</p>
+    <p className="paragraph">
+      I love world of programming for possibility to constantly learn new
+      things, being able to work in a team and make new friends.
+    </p>
+    <p className="paragraph">
+      In the past I was a professional musician and lived abroad.
+    </p>
+    <p className="paragraph">
+      Currently I am looking for a company to work, who has a friendly and
+      motivated team, a part of which I could become.
+    </p>
+    <p className="paragraph">
+      On my free time I love to travel, learn new languages and meet new people!
+    </p>
+  </section>
+);
 
 export default AboutMe;
