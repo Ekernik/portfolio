@@ -25,6 +25,10 @@
     @apply rounded-lg border-2 px-6 py-3 transition-all;
   }
 
+  .button--secondary {
+    @apply border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-slate-50 dark:bg-slate-800 dark:text-slate-400 dark:hover:border-slate-700 dark:hover:bg-slate-700 dark:focus:border-slate-700 dark:focus:bg-slate-700 dark:focus:text-slate-50;
+  }
+
   .section__header {
     @apply mb-10 border-b text-2xl font-bold text-slate-700 dark:border-b-slate-500 dark:text-slate-300;
   }
