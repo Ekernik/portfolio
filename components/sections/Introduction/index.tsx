@@ -1,3 +1,4 @@
+import SocialLinks from '@/components/SocialLinks';
 import React from 'react';
 
 const Introduction: React.FC = () => {
@@ -16,9 +17,10 @@ const Introduction: React.FC = () => {
         I specialize in building fast loading <span>websites</span> with proper
         semantics, acessebility in mind and SEO-friendliness.
       </p>
-      <p className="paragraph mb-10 lg:mb-20">
+      <p className="paragraph mb-10">
         I&apos;m looking forward working with you!
       </p>
+      <SocialLinks />
       <div className="flex gap-4">
         <a
           href="#my-work"

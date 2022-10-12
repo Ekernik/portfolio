@@ -1,11 +1,5 @@
+import SocialLinks from '@/components/SocialLinks';
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid';
-import {
-  Github,
-  Linkedin,
-  Telegram,
-  Vk,
-  Whatsapp,
-} from '@icons-pack/react-simple-icons';
 import React from 'react';
 
 const Contacts: React.FC = () => {
@@ -31,23 +25,7 @@ const Contacts: React.FC = () => {
         </p>
       </div>
 
-      <div className="flex w-full items-center justify-center gap-6 sm:justify-start">
-        <a href="https://vk.com/ekernik">
-          <Vk className="link--icon" />
-        </a>
-        <a href="https://t.me/ekernik">
-          <Telegram className="link--icon" />
-        </a>
-        <a href="https://github.com/ekernik">
-          <Github className="link--icon" />
-        </a>
-        <a href="https://www.linkedin.com/in/ekernik">
-          <Linkedin className="link--icon" />
-        </a>
-        <a href="https://wa.me/79995383821">
-          <Whatsapp className="link--icon" />
-        </a>
-      </div>
+      <SocialLinks />
     </section>
   );
 };
