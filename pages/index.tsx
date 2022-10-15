@@ -21,6 +21,9 @@ const Home: NextPage = () => (
         property="og:description"
         content="Nikita Ekern's personal website - developing modern and reliable websites using latest technologies"
       />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.ekernik.com/" />
+      <meta property="og:image" content="https://www.ekernik.com/website.jpg" />
     </Head>
     <div className="bg-slate-50 dark:bg-gray-900">
       <Header />
