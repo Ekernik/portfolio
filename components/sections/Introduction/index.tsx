@@ -12,15 +12,15 @@ const Introduction: React.FC = () => (
       Nikita Ekern
     </h1>
     <p className="mb-8 border-b text-xl font-bold text-slate-700 dark:border-b-slate-500 dark:text-slate-300 lg:text-2xl">
-      Frontend developer
+      Frontend Developer
     </p>
     <p className="paragraph mb-2">
-      I specialize on building accessible and fast web application to solve my
-      clients problems.
+      I specialize in building easily accessible and fast web applications which
+      address and solve my client&#39;s needs.
     </p>
     <p className="paragraph mb-10">
-      I value simple content structure, clean design patterns and love bringing
-      meaningful ideas to life in the browser.
+      I strive to create simple content structure with clean design patterns and
+      love bringing meaningful ideas to life within the browser.
     </p>
     <SocialLinks />
     <div className="flex w-full justify-center gap-4 sm:justify-start">
