@@ -56,4 +56,8 @@
   .tech__subheader {
     @apply mb-4 text-lg font-bold text-slate-700 dark:text-slate-400;
   }
+
+  .badge {
+    @apply rounded bg-slate-200 px-2 py-1 text-xs text-slate-900 sm:text-sm;
+  }
 }
