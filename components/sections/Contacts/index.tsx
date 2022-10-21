@@ -7,6 +7,7 @@ const Contacts: React.FC = () => {
     <section id="contacts" className="section">
       <h2 className="section__header">#Contacts</h2>
       <p className="paragraph">I`m activly looking for work!</p>
+      <p className="paragraph">Ready for relocating or business trips.</p>
       <p className="paragraph mb-4">
         Feel free to write me an email or contact me via messaging apps below.
       </p>
