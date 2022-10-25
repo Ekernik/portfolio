@@ -19,7 +19,7 @@ import { Fragment } from 'react';
 import scrollToSection from '../../helpers/scrollToSection';
 
 const Header: React.FC = () => (
-  <Popover className="sticky top-0 w-full bg-white dark:bg-gray-800">
+  <Popover className="sticky top-0 z-10 w-full bg-white dark:bg-gray-800">
     <header className="mx-auto">
       <div className="flex items-center justify-between py-6 px-4 shadow-md sm:px-6 md:justify-start md:space-x-10 lg:px-20">
         {/* Logo */}
