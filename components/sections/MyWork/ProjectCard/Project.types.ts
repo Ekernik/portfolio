@@ -8,4 +8,5 @@ export default interface ProjectCardProps
   description: string;
   usedTech: string[];
   projectLink: string;
+  githubLink?: string;
 }

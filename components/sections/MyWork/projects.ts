@@ -17,5 +17,6 @@ export const PROJECTS: Project[] = [
     description: 'The site you are currently looking at.',
     usedTech: ['React', 'Next.JS', 'TypeScript', 'Vercel'],
     projectLink: 'www.ekernik.com',
+    githubLink: 'Ekernik/portfolio',
   },
 ];
