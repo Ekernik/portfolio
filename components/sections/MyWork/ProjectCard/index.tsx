@@ -16,6 +16,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
       alt="Screenshot of website for cardiosurgeons"
       placeholder="blur"
       fill
+      sizes="100%"
       className="object-cover"
     />
     <div className="absolute top-0 left-0 z-0 max-w-full p-4 text-slate-100 md:p-6 lg:p-8">
