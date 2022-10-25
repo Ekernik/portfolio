@@ -42,6 +42,7 @@ const Introduction: React.FC = () => (
           href="/CV%20-%20Nikita%20Ekern%20(Frontend%20developer).pdf"
           className="button button--secondary rounded-l-none  px-4 dark:border-l dark:border-l-slate-600"
           download
+          aria-label="Download my resume"
         >
           <ArrowDownTrayIcon className="h-6 w-6" />
         </a>

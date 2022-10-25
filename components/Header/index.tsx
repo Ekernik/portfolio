@@ -23,16 +23,24 @@ const Header: React.FC = () => (
     <header className="mx-auto">
       <div className="flex items-center justify-between py-6 px-4 shadow-md sm:px-6 md:justify-start md:space-x-10 lg:px-20">
         {/* Logo */}
-        <div className="flex justify-start lg:w-0 lg:flex-1">
-          <span className="sr-only">Nikita Ekern - web developer</span>
-          <button onClick={() => scrollToSection('introduction')}>
-            <FingerPrintIcon className="h-8 w-auto dark:text-slate-400 sm:h-10" />
+        <div className="flex  justify-start  lg:w-0 lg:flex-1">
+          <span className="sr-only text-black dark:text-white">
+            Nikita Ekern - web developer
+          </span>
+          <button
+            className="flex items-center gap-1 text-slate-600 transition dark:text-slate-400 dark:hover:text-slate-200"
+            onClick={() => scrollToSection('introduction')}
+          >
+            <FingerPrintIcon className="h-8 w-auto  sm:h-10" />
+            <span>Ekernik</span>
           </button>
         </div>
 
         <div className="-my-2 -mr-2 md:hidden">
           <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600 dark:bg-slate-700 dark:hover:bg-slate-600 dark:hover:text-slate-200 dark:focus:text-slate-200 dark:focus:ring-slate-400">
-            <span className="sr-only">Open menu</span>
+            <span className="sr-only text-black dark:text-white">
+              Open menu
+            </span>
             <Bars3BottomRightIcon className="h-8 w-8" aria-hidden="true" />
           </Popover.Button>
         </div>
@@ -81,8 +89,12 @@ const Header: React.FC = () => (
         <div className="divide-y divide-slate-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:divide-slate-600 dark:bg-slate-700">
           <div className="px-5 pt-5 pb-6">
             <div className="flex items-center justify-between">
-              <Popover.Button onClick={() => scrollToSection('introduction')}>
+              <Popover.Button
+                className="burger__link burger__link--text"
+                onClick={() => scrollToSection('introduction')}
+              >
                 <FingerPrintIcon className="h-8 w-auto dark:text-slate-400" />
+                <span>Back to the Top</span>
               </Popover.Button>
               <div className="-mr-2">
                 <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600 dark:bg-slate-500 dark:hover:bg-slate-400">
@@ -127,28 +139,43 @@ const Header: React.FC = () => (
           <div className="space-y-6 py-6 px-5">
             <div className="grid grid-cols-5 gap-y-4 gap-x-8">
               <a href="https://vk.com/ekernik" className="flex justify-center">
-                <Vk className="burger__link burger__link--icon" />
+                <Vk
+                  className="burger__link burger__link--icon"
+                  aria-label="VK - social network"
+                />
               </a>
               <a href="https://t.me/ekernik" className="flex justify-center">
-                <Telegram className="burger__link burger__link--icon" />
+                <Telegram
+                  className="burger__link burger__link--icon"
+                  aria-label="Telegram - messenger app"
+                />
               </a>
               <a
                 href="https://github.com/ekernik"
                 className="flex justify-center"
               >
-                <Github className="burger__link burger__link--icon" />
+                <Github
+                  className="burger__link burger__link--icon"
+                  aria-label="Github"
+                />
               </a>
               <a
                 href="https://www.linkedin.com/in/ekernik"
                 className="flex justify-center"
               >
-                <Linkedin className="burger__link burger__link--icon" />
+                <Linkedin
+                  className="burger__link burger__link--icon"
+                  aria-label="LinkedIn"
+                />
               </a>
               <a
                 href="https://wa.me/79995383821"
                 className="flex justify-center"
               >
-                <Whatsapp className="burger__link burger__link--icon" />
+                <Whatsapp
+                  className="burger__link burger__link--icon"
+                  aria-label="WhatsApp - messenger app"
+                />
               </a>
             </div>
           </div>
