@@ -1,4 +1,4 @@
-import { StaticImageData } from 'next/future/image';
+import { StaticImageData } from 'next/image';
 import { HTMLAttributes } from 'react';
 
 export default interface ProjectCardProps

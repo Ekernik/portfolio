@@ -1,4 +1,5 @@
-import { Popover, Transition } from '@headlessui/react';
+'use client';
+
 import {
   Bars3BottomRightIcon,
   BriefcaseIcon,
@@ -15,127 +16,154 @@ import {
   Vk,
   Whatsapp,
 } from '@icons-pack/react-simple-icons';
-import { Fragment } from 'react';
-import scrollToSection from '../../helpers/scrollToSection';
+import scrollToSection from 'helpers/scrollToSection';
+import React, { useState } from 'react';
 
-const Header: React.FC = () => (
-  <Popover className="sticky top-0 z-10 w-full bg-white dark:bg-gray-800">
-    <header className="mx-auto">
-      <div className="flex items-center justify-between py-6 px-4 shadow-md sm:px-6 md:justify-start md:space-x-10 lg:px-20">
-        {/* Logo */}
-        <div className="flex  justify-start  lg:w-0 lg:flex-1">
-          <span className="sr-only text-black dark:text-white">
-            Nikita Ekern - web developer
-          </span>
-          <button
-            className="flex items-center gap-1 text-slate-600 transition dark:text-slate-400 dark:hover:text-slate-200"
-            onClick={() => scrollToSection('introduction')}
-          >
-            <FingerPrintIcon className="h-8 w-auto  sm:h-10" />
-            <span>Ekernik</span>
-          </button>
+const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  let modalClass = isOpen ? 'absolute' : 'hidden';
+
+  const toggleMenu = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  return (
+    <div className="sticky top-0 z-10 w-full bg-white dark:bg-gray-800">
+      <header className="mx-auto shadow-md">
+        <div className="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
+          <div className="flex justify-start lg:w-0 lg:flex-1">
+            <span className="sr-only">Nikita Ekern - web developer</span>
+            <button
+              className="flex items-center gap-1 text-slate-600 transition dark:text-slate-400 dark:hover:text-slate-200"
+              onClick={() => scrollToSection('introduction')}
+            >
+              <FingerPrintIcon className="h-8 w-auto sm:h-10" />
+              <span>Ekernik</span>
+            </button>
+          </div>
+
+          <div className="-my-2 -mr-2 md:hidden">
+            <button
+              type="button"
+              className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              aria-expanded="false"
+              onClick={toggleMenu}
+            >
+              <span className="sr-only text-black dark:text-white">
+                Open menu
+              </span>
+              <Bars3BottomRightIcon className="h-8 w-8" aria-hidden="true" />
+            </button>
+          </div>
+
+          <nav className="hidden space-x-10 md:flex">
+            <button
+              className="header__link"
+              onClick={() => scrollToSection('about-me')}
+            >
+              About Me
+            </button>
+            <button
+              onClick={() => scrollToSection('tech-stack')}
+              className="header__link"
+            >
+              Tech Stack
+            </button>
+            <button
+              onClick={() => scrollToSection('my-work')}
+              className="header__link"
+            >
+              My Work
+            </button>
+            <button
+              onClick={() => scrollToSection('contacts')}
+              className="header__link"
+            >
+              Contacts
+            </button>
+          </nav>
         </div>
+      </header>
 
-        <div className="-my-2 -mr-2 md:hidden">
-          <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600 dark:bg-slate-700 dark:hover:bg-slate-600 dark:hover:text-slate-200 dark:focus:text-slate-200 dark:focus:ring-slate-400">
-            <span className="sr-only text-black dark:text-white">
-              Open menu
-            </span>
-            <Bars3BottomRightIcon className="h-8 w-8" aria-hidden="true" />
-          </Popover.Button>
-        </div>
-        <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-          <button
-            className="header__link"
-            onClick={() => scrollToSection('about-me')}
-          >
-            About Me
-          </button>
-          <button
-            onClick={() => scrollToSection('tech-stack')}
-            className="header__link"
-          >
-            Tech Stack
-          </button>
-          <button
-            onClick={() => scrollToSection('my-work')}
-            className="header__link"
-          >
-            My Work
-          </button>
-          <button
-            onClick={() => scrollToSection('contacts')}
-            className="header__link"
-          >
-            Contacts
-          </button>
-        </Popover.Group>
-      </div>
-    </header>
-
-    <Transition
-      as={Fragment}
-      enter="duration-200 ease-out"
-      enterFrom="opacity-0 scale-95"
-      enterTo="opacity-100 scale-100"
-      leave="duration-100 ease-in"
-      leaveFrom="opacity-100 scale-100"
-      leaveTo="opacity-0 scale-95"
-    >
-      <Popover.Panel
-        focus
-        className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
+      {/* <!--
+            Mobile menu, show/hide based on mobile menu state.
+        
+            Entering: "duration-200 ease-out"
+              From: "opacity-0 scale-95"
+              To: "opacity-100 scale-100"
+            Leaving: "duration-100 ease-in"
+              From: "opacity-100 scale-100"
+              To: "opacity-0 scale-95"
+          --> */}
+      <div
+        className={`${modalClass} inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden`}
       >
-        <div className="divide-y divide-slate-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:divide-slate-600 dark:bg-slate-700">
+        <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
           <div className="px-5 pt-5 pb-6">
             <div className="flex items-center justify-between">
-              <Popover.Button
+              <button
                 className="burger__link burger__link--text"
-                onClick={() => scrollToSection('introduction')}
+                onClick={() => {
+                  scrollToSection('introduction', setIsOpen);
+                }}
               >
                 <FingerPrintIcon className="h-8 w-auto dark:text-slate-400" />
                 <span>Back to the Top</span>
-              </Popover.Button>
+              </button>
+
               <div className="-mr-2">
-                <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600 dark:bg-slate-500 dark:hover:bg-slate-400">
+                <button
+                  onClick={toggleMenu}
+                  className="inline-flex items-center justify-center rounded-md bg-white p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600 dark:bg-slate-500 dark:hover:bg-slate-400"
+                >
                   <span className="sr-only">Close menu</span>
                   <XMarkIcon className="h-8 w-8" aria-hidden="true" />
-                </Popover.Button>
+                </button>
               </div>
             </div>
+
             <div className="mt-6">
               <nav className="grid gap-y-8">
-                <Popover.Button
-                  onClick={() => scrollToSection('about-me')}
+                <button
+                  onClick={() => {
+                    scrollToSection('about-me', setIsOpen);
+                  }}
                   className="burger__link burger__link--text"
                 >
                   <UserIcon className="h-8 w-8" />
                   About Me
-                </Popover.Button>
-                <Popover.Button
-                  onClick={() => scrollToSection('tech-stack')}
+                </button>
+                <button
+                  onClick={() => {
+                    scrollToSection('tech-stack', setIsOpen);
+                  }}
                   className="burger__link burger__link--text"
                 >
                   <CommandLineIcon className="h-8 w-8" />
                   Tech Stack
-                </Popover.Button>
-                <Popover.Button
-                  onClick={() => scrollToSection('my-work')}
+                </button>
+                <button
+                  onClick={() => {
+                    scrollToSection('my-work', setIsOpen);
+                  }}
                   className="burger__link burger__link--text"
                 >
                   <BriefcaseIcon className="h-8 w-8" />
                   My Work
-                </Popover.Button>
-                <Popover.Button
-                  onClick={() => scrollToSection('contacts')}
+                </button>
+                <button
+                  onClick={() => {
+                    scrollToSection('contacts', setIsOpen);
+                  }}
                   className="burger__link burger__link--text"
                 >
                   <EnvelopeIcon className="h-8 w-8" />
                   Contacts
-                </Popover.Button>
+                </button>
               </nav>
             </div>
           </div>
+
           <div className="space-y-6 py-6 px-5">
             <div className="grid grid-cols-5 gap-y-4 gap-x-8">
               <a href="https://vk.com/ekernik" className="flex justify-center">
@@ -179,6 +207,7 @@ const Header: React.FC = () => (
               </a>
             </div>
           </div>
+
           <div className="space-y flex items-center justify-between py-6 px-5">
             <a
               href="tel:+79995383821"
@@ -196,9 +225,9 @@ const Header: React.FC = () => (
             </a>
           </div>
         </div>
-      </Popover.Panel>
-    </Transition>
-  </Popover>
-);
+      </div>
+    </div>
+  );
+};
 
 export default Header;

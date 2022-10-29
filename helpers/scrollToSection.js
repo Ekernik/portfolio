@@ -1,4 +1,8 @@
-export default function scrollToSection(id) {
+export default function scrollToSection(id, setState) {
+  if (typeof setState === 'function') {
+    setState((prev) => !prev);
+  }
+
   const section = document.getElementById(id);
 
   const offset = id === 'introduction' ? 80 : 160;

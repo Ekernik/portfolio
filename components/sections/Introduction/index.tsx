@@ -1,3 +1,5 @@
+'use client';
+
 import SocialLinks from '@/components/SocialLinks';
 import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 import scrollToSection from 'helpers/scrollToSection';
