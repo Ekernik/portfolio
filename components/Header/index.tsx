@@ -45,7 +45,7 @@ const Header: React.FC = () => {
           <div className="-my-2 -mr-2 md:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300"
               aria-expanded="false"
               onClick={toggleMenu}
             >
@@ -98,7 +98,7 @@ const Header: React.FC = () => {
       <div
         className={`${modalClass} inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden`}
       >
-        <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+        <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:divide-gray-600 dark:bg-gray-700">
           <div className="px-5 pt-5 pb-6">
             <div className="flex items-center justify-between">
               <button
@@ -107,14 +107,14 @@ const Header: React.FC = () => {
                   scrollToSection('introduction', setIsOpen);
                 }}
               >
-                <FingerPrintIcon className="h-8 w-auto dark:text-slate-400" />
+                <FingerPrintIcon className="h-8 w-auto" />
                 <span>Back to the Top</span>
               </button>
 
               <div className="-mr-2">
                 <button
                   onClick={toggleMenu}
-                  className="inline-flex items-center justify-center rounded-md bg-white p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600 dark:bg-slate-500 dark:hover:bg-slate-400"
+                  className="inline-flex items-center justify-center rounded-md bg-white p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600 dark:bg-gray-700 dark:hover:bg-gray-800 dark:hover:text-gray-300"
                 >
                   <span className="sr-only">Close menu</span>
                   <XMarkIcon className="h-8 w-8" aria-hidden="true" />

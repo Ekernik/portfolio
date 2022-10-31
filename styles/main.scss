@@ -4,7 +4,7 @@
 
 @layer components {
   .section {
-    @apply container mx-auto my-20 flex h-max flex-col items-start justify-center px-4 md:max-w-lg md:px-1 lg:max-w-2xl;
+    @apply container mx-auto my-14 flex h-max flex-col items-start justify-center px-4 md:max-w-lg md:px-1 lg:max-w-2xl;
   }
 
   .paragraph {
@@ -34,7 +34,7 @@
   }
 
   .header__link {
-    @apply text-base font-medium text-slate-500 transition hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100;
+    @apply text-base font-medium text-slate-500 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100;
   }
 
   .burger__link {

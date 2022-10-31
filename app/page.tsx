@@ -7,7 +7,7 @@ import TechStack from '../components/sections/TechStack';
 
 export default function Page() {
   return (
-    <main className="flex flex-col gap-20">
+    <main className="flex flex-col">
       <Introduction />
       <AboutMe />
       <TechStack />
