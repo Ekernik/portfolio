@@ -1,0 +1,11 @@
+.skill {
+  @apply rounded bg-blue-100 p-2 text-center dark:bg-slate-800 dark:text-slate-400;
+}
+
+.tech__subheader {
+  @apply mb-4 text-lg font-bold text-slate-700 dark:text-slate-400;
+}
+
+.badge {
+  @apply rounded bg-slate-200 px-2 py-1 text-xs text-slate-900 sm:text-sm;
+}
