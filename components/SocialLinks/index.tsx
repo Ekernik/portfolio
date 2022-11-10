@@ -8,7 +8,7 @@ import {
 
 const SocialLinks: React.FC = () => {
   return (
-    <div className="mb-10 flex w-full items-center justify-center gap-6 sm:justify-start">
+    <div className="mt-5 mb-7 flex w-full items-center justify-center gap-6 sm:justify-start">
       <a href="https://vk.com/ekernik">
         <Vk className="link--icon" aria-label="VK - social network" />
       </a>

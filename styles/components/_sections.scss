@@ -1,5 +1,9 @@
 .section {
   @apply container mx-auto my-14 flex h-max flex-col items-start justify-center px-4 md:max-w-lg md:px-1 lg:max-w-2xl;
+
+  &:first-of-type {
+    margin-top: 2px;
+  }
 }
 
 .section__header {

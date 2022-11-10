@@ -7,7 +7,7 @@ import React from 'react';
 
 const Introduction: React.FC = () => (
   <section id="introduction" className="section">
-    <p className="mt-20 text-sm text-slate-600 dark:text-slate-400 lg:text-base">
+    <p className="mt-16 text-sm text-slate-600 dark:text-slate-400 md:mt-20 lg:text-base">
       Hi, my name is
     </p>
     <h1 className="text-4xl font-bold text-slate-800 dark:text-slate-200 sm:-ml-1 lg:text-6xl">
@@ -20,7 +20,7 @@ const Introduction: React.FC = () => (
       I specialize in building easily accessible and fast web applications which
       address and solve my client&#39;s needs.
     </p>
-    <p className="paragraph mb-10">
+    <p className="paragraph mb-0">
       I strive to create simple content structure with clean design patterns and
       love bringing meaningful ideas to life within the browser.
     </p>
