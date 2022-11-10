@@ -18,6 +18,7 @@ import {
 } from '@icons-pack/react-simple-icons';
 import scrollToSection from 'helpers/scrollToSection';
 import React, { useState } from 'react';
+import DarkModeToggle from '../DarkModeToggle';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,6 +42,8 @@ const Header: React.FC = () => {
               <span>Ekernik</span>
             </button>
           </div>
+
+          <DarkModeToggle />
 
           <div className="-my-2 -mr-2 md:hidden">
             <button

@@ -32,17 +32,17 @@ const Introduction: React.FC = () => (
       >
         See my work!
       </button>
-      <div className="flex">
+      <div className="double-button">
         <a
           href="/CV%20-%20Nikita%20Ekern%20(Frontend%20developer).pdf"
           target="_tab"
-          className="button button--secondary rounded-r-none border-r-0"
+          className="button button--secondary"
         >
           Resume
         </a>
         <a
           href="/CV%20-%20Nikita%20Ekern%20(Frontend%20developer).pdf"
-          className="button button--secondary rounded-l-none  px-4 dark:border-l dark:border-l-slate-600"
+          className="button button--secondary"
           download
           aria-label="Download my resume"
         >

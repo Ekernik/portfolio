@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import { Inter } from '@next/font/google';
+import Script from 'next/script';
 import '../styles/main.scss';
 
 const inter = Inter();
@@ -12,6 +13,17 @@ export default function RootLayout({
   return (
     <html lang="en-US" className={`scroll-smooth ${inter.className}`}>
       <head>
+        <Script id="theme-script" strategy="beforeInteractive">
+          {`if (
+            localStorage.theme === 'dark' ||
+            (!('theme' in localStorage) &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches)
+          ) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }`}
+        </Script>
         <title>Nikita Ekern - Web Developer</title>
         <meta property="og:title" content="Nikita Ekern - Web Developer" />
         <meta
@@ -36,7 +48,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
-      <body className="bg-slate-50 dark:bg-gray-900">
+      <body>
         <Header />
         {children}
       </body>
