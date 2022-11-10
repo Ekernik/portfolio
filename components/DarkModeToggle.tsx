@@ -32,7 +32,7 @@ const DarkModeToggle: FC<IToggle> = ({ className }) => {
   return (
     <button
       onClick={toggleTheme}
-      className={`text-slate-600 transition dark:text-slate-400 ${className}`}
+      className={`text-slate-600 transition hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200`}
     >
       {icon}
     </button>

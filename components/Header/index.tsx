@@ -43,12 +43,12 @@ const Header: React.FC = () => {
             </button>
           </div>
 
-          <DarkModeToggle className="flex-1 md:flex-none" />
+          <DarkModeToggle />
 
-          <div className=" -my-2 -mr-2 md:hidden">
+          <div className="-my-2 -mr-2 flex-1 md:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+              className="float-right inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300"
               aria-expanded="false"
               onClick={toggleMenu}
             >
