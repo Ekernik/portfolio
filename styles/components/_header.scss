@@ -1,0 +1,15 @@
+.header__link {
+  @apply text-base font-medium text-slate-500 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100;
+}
+
+.burger__link {
+  @apply text-slate-900 transition hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300;
+
+  &--text {
+    @apply flex items-center gap-2 font-medium;
+  }
+
+  &--icon {
+    @apply h-8 w-8;
+  }
+}

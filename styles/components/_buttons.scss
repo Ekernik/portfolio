@@ -1,0 +1,19 @@
+.button {
+  @apply rounded-lg border-2 px-6 py-3 transition-all;
+}
+
+.double-button {
+  display: flex;
+
+  > a:first-of-type {
+    @apply rounded-r-none first:border-r-0;
+  }
+
+  > a:last-of-type {
+    @apply rounded-l-none px-4 dark:border-l dark:border-l-slate-600;
+  }
+}
+
+.button--secondary {
+  @apply border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-slate-50 dark:bg-slate-800 dark:text-slate-400 dark:hover:border-slate-700 dark:hover:bg-slate-700 dark:focus:border-slate-700 dark:focus:bg-slate-700 dark:focus:text-slate-50;
+}
