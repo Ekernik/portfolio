@@ -32,7 +32,7 @@ const Header: React.FC = () => {
     <div className="sticky top-0 z-10 w-full bg-white dark:bg-gray-800">
       <header className="mx-auto shadow-md">
         <div className="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
+          <div className="flex flex-1 justify-start lg:w-0 lg:flex-1">
             <span className="sr-only">Nikita Ekern - web developer</span>
             <button
               className="flex items-center gap-1 text-slate-600 transition dark:text-slate-400 dark:hover:text-slate-200"
@@ -43,9 +43,9 @@ const Header: React.FC = () => {
             </button>
           </div>
 
-          <DarkModeToggle />
+          <DarkModeToggle className="flex-1 md:flex-none" />
 
-          <div className="-my-2 -mr-2 md:hidden">
+          <div className=" -my-2 -mr-2 md:hidden">
             <button
               type="button"
               className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300"

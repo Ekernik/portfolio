@@ -5,7 +5,7 @@ import { ButtonHTMLAttributes, FC, useEffect, useState } from 'react';
 
 interface IToggle extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
-const DarkModeToggle: FC<IToggle> = () => {
+const DarkModeToggle: FC<IToggle> = ({ className }) => {
   const [theme, setTheme] = useState<string | null>(null);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const DarkModeToggle: FC<IToggle> = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="text-slate-600 transition dark:text-slate-400"
+      className={`text-slate-600 transition dark:text-slate-400 ${className}`}
     >
       {icon}
     </button>
