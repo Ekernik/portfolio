@@ -1,12 +1,19 @@
 'use client';
 
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid/';
-import { ButtonHTMLAttributes, FC, useState } from 'react';
+import { ButtonHTMLAttributes, FC, useEffect, useState } from 'react';
 
 interface IToggle extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
 const DarkModeToggle: FC<IToggle> = () => {
   const [theme, setTheme] = useState<string | null>(null);
+
+  useEffect(() => {
+    document.querySelector('html')?.classList.contains('dark') ||
+    localStorage.theme === 'dark'
+      ? setTheme('dark')
+      : setTheme('light');
+  }, []);
 
   const toggleTheme = () => {
     const html = document.querySelector('html');
