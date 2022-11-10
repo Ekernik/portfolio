@@ -5,7 +5,7 @@ import { ButtonHTMLAttributes, FC, useEffect, useState } from 'react';
 
 interface IToggle extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
-const DarkModeToggle: FC<IToggle> = ({ className }) => {
+const DarkModeToggle: FC<IToggle> = () => {
   const [theme, setTheme] = useState<string | null>(null);
 
   useEffect(() => {
