@@ -1,15 +1,16 @@
 import Header from '@/components/Header';
 import { Inter } from '@next/font/google';
 import Script from 'next/script';
+import { FC } from 'react';
 import '../styles/main.scss';
 
 const inter = Inter();
 
-export default function RootLayout({
-  children,
-}: {
+interface ILayout {
   children: React.ReactNode;
-}) {
+}
+
+const RootLayout: FC<ILayout> = ({ children }) => {
   return (
     <html lang="en-US" className={`scroll-smooth ${inter.className}`}>
       <head>
@@ -25,7 +26,7 @@ export default function RootLayout({
           }`}
         </Script>
         <title>Nikita Ekern - Web Developer</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content="Nikita Ekern - Web Developer" />
         <meta
@@ -56,4 +57,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
