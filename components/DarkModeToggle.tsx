@@ -1,6 +1,6 @@
 'use client';
 
-import { MoonIcon, SunIcon } from '@heroicons/react/24/solid/';
+import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
 import { ButtonHTMLAttributes, FC, useEffect, useState } from 'react';
 
 interface IToggle extends ButtonHTMLAttributes<HTMLButtonElement> {}

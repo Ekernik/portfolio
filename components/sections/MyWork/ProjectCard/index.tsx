@@ -1,5 +1,5 @@
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
-import { Github } from '@icons-pack/react-simple-icons';
+import { Sigithub as Github } from '@icons-pack/react-simple-icons';
 import Image from 'next/image';
 import { FC } from 'react';
 import ProjectCardProps from './Project.types';

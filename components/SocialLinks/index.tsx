@@ -1,9 +1,9 @@
 import {
-  Github,
-  Linkedin,
-  Telegram,
-  Vk,
-  Whatsapp,
+  Sigithub as Github,
+  Silinkedin as Linkedin,
+  Sitelegram as Telegram,
+  Sivk as Vk,
+  Siwhatsapp as Whatsapp,
 } from '@icons-pack/react-simple-icons';
 
 const SocialLinks: React.FC = () => {

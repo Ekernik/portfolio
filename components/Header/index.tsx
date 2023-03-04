@@ -10,11 +10,11 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import {
-  Github,
-  Linkedin,
-  Telegram,
-  Vk,
-  Whatsapp,
+  Sigithub as Github,
+  Silinkedin as Linkedin,
+  Sitelegram as Telegram,
+  Sivk as Vk,
+  Siwhatsapp as Whatsapp,
 } from '@icons-pack/react-simple-icons';
 import scrollToSection from 'helpers/scrollToSection';
 import React, { useState } from 'react';
