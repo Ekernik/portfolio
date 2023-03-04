@@ -1,8 +1,8 @@
 import Header from '@/components/Header';
-import { Inter } from '@next/font/google';
+import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import { FC } from 'react';
-import '../styles/main.scss';
+import '/styles/main.scss';
 
 const inter = Inter();
 
