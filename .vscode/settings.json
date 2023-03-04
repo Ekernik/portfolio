@@ -6,6 +6,6 @@
     "source.organizeImports": true
   },
   "scss.lint.unknownAtRules": "ignore",
-  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true
 }
