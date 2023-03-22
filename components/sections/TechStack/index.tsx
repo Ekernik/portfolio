@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-const TechStack: React.FC = () => (
+const TechStack: FC = () => (
   <section id="tech-stack" className="section">
     <h2 className="section__header">#Tech Stack</h2>
     <div className="mb-10 w-full">

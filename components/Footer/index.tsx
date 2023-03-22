@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-const Footer: FC = () => {
-  return <footer>&copy; 2022 Nikita Ekern - Web Developer</footer>;
-};
+const Footer: FC = () => (
+  <footer>&copy; 2022 - 2023 Nikita Ekern - Web Developer</footer>
+);
 
 export default Footer;

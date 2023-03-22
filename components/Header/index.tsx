@@ -10,13 +10,13 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import {
-  Sigithub as Github,
-  Silinkedin as Linkedin,
-  Sitelegram as Telegram,
-  Sivk as Vk,
-  Siwhatsapp as Whatsapp,
+  SiGithub as Github,
+  SiLinkedin as Linkedin,
+  SiTelegram as Telegram,
+  SiVk as Vk,
+  SiWhatsapp as Whatsapp,
 } from '@icons-pack/react-simple-icons';
-import scrollToSection from 'helpers/scrollToSection';
+import { scrollToSection } from 'helpers/scrollToSection';
 import React, { useState } from 'react';
 import DarkModeToggle from '../DarkModeToggle';
 
@@ -36,7 +36,7 @@ const Header: React.FC = () => {
             <span className="sr-only">Nikita Ekern - web developer</span>
             <button
               className="flex items-center gap-1 text-slate-600 transition dark:text-slate-400 dark:hover:text-slate-200"
-              onClick={() => scrollToSection('introduction')}
+              onClick={() => scrollToSection({ id: 'introduction' })}
             >
               <FingerPrintIcon className="h-8 w-auto sm:h-10" />
               <span>Ekernik</span>
@@ -62,24 +62,24 @@ const Header: React.FC = () => {
           <nav className="hidden space-x-10 md:flex">
             <button
               className="header__link"
-              onClick={() => scrollToSection('about-me')}
+              onClick={() => scrollToSection({ id: 'about-me' })}
             >
               About Me
             </button>
             <button
-              onClick={() => scrollToSection('tech-stack')}
+              onClick={() => scrollToSection({ id: 'tech-stack' })}
               className="header__link"
             >
               Tech Stack
             </button>
             <button
-              onClick={() => scrollToSection('my-work')}
+              onClick={() => scrollToSection({ id: 'my-work' })}
               className="header__link"
             >
               My Work
             </button>
             <button
-              onClick={() => scrollToSection('contacts')}
+              onClick={() => scrollToSection({ id: 'contacts' })}
               className="header__link"
             >
               Contacts
@@ -107,7 +107,7 @@ const Header: React.FC = () => {
               <button
                 className="burger__link burger__link--text"
                 onClick={() => {
-                  scrollToSection('introduction', setIsOpen);
+                  scrollToSection({ id: 'introduction', setState: setIsOpen });
                 }}
               >
                 <FingerPrintIcon className="h-8 w-auto" />
@@ -129,7 +129,7 @@ const Header: React.FC = () => {
               <nav className="grid gap-y-8">
                 <button
                   onClick={() => {
-                    scrollToSection('about-me', setIsOpen);
+                    scrollToSection({ id: 'about-me', setState: setIsOpen });
                   }}
                   className="burger__link burger__link--text"
                 >
@@ -138,7 +138,7 @@ const Header: React.FC = () => {
                 </button>
                 <button
                   onClick={() => {
-                    scrollToSection('tech-stack', setIsOpen);
+                    scrollToSection({ id: 'tech-stack', setState: setIsOpen });
                   }}
                   className="burger__link burger__link--text"
                 >
@@ -147,7 +147,7 @@ const Header: React.FC = () => {
                 </button>
                 <button
                   onClick={() => {
-                    scrollToSection('my-work', setIsOpen);
+                    scrollToSection({ id: 'my-work', setState: setIsOpen });
                   }}
                   className="burger__link burger__link--text"
                 >
@@ -156,7 +156,7 @@ const Header: React.FC = () => {
                 </button>
                 <button
                   onClick={() => {
-                    scrollToSection('contacts', setIsOpen);
+                    scrollToSection({ id: 'contacts', setState: setIsOpen });
                   }}
                   className="burger__link burger__link--text"
                 >

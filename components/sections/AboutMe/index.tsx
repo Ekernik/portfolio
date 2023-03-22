@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-const AboutMe: React.FC = () => (
+const AboutMe: FC = () => (
   <section id="about-me" className="section">
     <h2 className="section__header">#About me</h2>
     <p className="paragraph">

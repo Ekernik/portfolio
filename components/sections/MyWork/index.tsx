@@ -1,8 +1,8 @@
 import ProjectCard from '@/components/sections/MyWork/ProjectCard';
-import React from 'react';
+import { FC } from 'react';
 import { PROJECTS } from './projects';
 
-const MyWork: React.FC = () => {
+const MyWork: FC = () => {
   const renderProjects = () =>
     PROJECTS.map((project) => <ProjectCard key={project.title} {...project} />);
 

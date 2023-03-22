@@ -2,10 +2,10 @@
 
 import SocialLinks from '@/components/SocialLinks';
 import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
-import scrollToSection from 'helpers/scrollToSection';
-import React from 'react';
+import { scrollToSection } from 'helpers/scrollToSection';
+import { FC } from 'react';
 
-const Introduction: React.FC = () => (
+const Introduction: FC = () => (
   <section id="introduction" className="section">
     <p className="mt-16 text-sm text-slate-600 dark:text-slate-400 md:mt-20 lg:text-base">
       Hi, my name is
@@ -27,7 +27,7 @@ const Introduction: React.FC = () => (
     <SocialLinks />
     <div className="flex w-full justify-center gap-4 sm:justify-start">
       <button
-        onClick={() => scrollToSection('my-work')}
+        onClick={() => scrollToSection({ id: 'my-work' })}
         className="button border-slate-900 bg-slate-900 text-slate-50 hover:bg-slate-700 dark:bg-slate-200  dark:text-slate-900  dark:hover:bg-slate-50 dark:focus:bg-slate-50"
       >
         See my work!

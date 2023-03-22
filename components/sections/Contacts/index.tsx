@@ -1,8 +1,8 @@
 import SocialLinks from '@/components/SocialLinks';
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid';
-import React from 'react';
+import { FC } from 'react';
 
-const Contacts: React.FC = () => {
+const Contacts: FC = () => {
   return (
     <section id="contacts" className="section">
       <h2 className="section__header">#Contacts</h2>
