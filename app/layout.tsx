@@ -1,16 +1,12 @@
 import Header from '@/components/Header';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
-import { FC } from 'react';
+import { FC, PropsWithChildren } from 'react';
 import '/styles/main.scss';
 
 const inter = Inter();
 
-interface ILayout {
-  children: React.ReactNode;
-}
-
-const RootLayout: FC<ILayout> = ({ children }) => {
+const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en-US" className={`scroll-smooth ${inter.className}`}>
       <head>
@@ -41,12 +37,12 @@ const RootLayout: FC<ILayout> = ({ children }) => {
         <meta property="og:url" content="https://www.ekernik.com/" />
         <meta
           property="og:image"
-          content="https://www.ekernik.com/website.jpg"
+          content="https://www.ekernik.com/website.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:image"
-          content="https://www.ekernik.com/website.jpg"
+          content="https://www.ekernik.com/website.png"
         />
         <link rel="shortcut icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
