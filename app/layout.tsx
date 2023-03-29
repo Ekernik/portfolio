@@ -10,7 +10,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en-US" className={`scroll-smooth ${inter.className}`}>
       <head>
-        <Script id="theme-script" strategy="beforeInteractive">
+        <Script id="theme-script">
           {`if (
             localStorage.theme === 'dark' ||
             (!('theme' in localStorage) &&
