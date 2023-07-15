@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import { FC, PropsWithChildren } from 'react';
@@ -60,6 +61,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
       <body>
         <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   );
