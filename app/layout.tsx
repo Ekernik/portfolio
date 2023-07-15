@@ -5,7 +5,7 @@ import Script from 'next/script';
 import { FC, PropsWithChildren } from 'react';
 import '/styles/main.scss';
 
-const inter = Inter();
+const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
